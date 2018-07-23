@@ -1,0 +1,61 @@
+#load-background{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #eeffff;
+	z-index: 1;
+}
+
+#load-main{
+	display: none;
+	width: 30%;
+	height: 20%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	margin: auto;
+	background-color: #111111;
+	z-index: 2;
+}
+
+#load-text{
+	color: #ffffff;
+}
+
+#main{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+#welcome{
+	width: 30%;
+	height: 20%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	margin: auto;
+	background-color: #eeffff;
+}
+
+#BB{
+	width: 40%;
+	height: 30%;
+	position: absolute;
+	top: 10%;
+	left: 0;
+	text-align: center;
+	background-color: #ffeeff;
+}
+

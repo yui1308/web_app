@@ -1,0 +1,83 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+	
+	<script>
+		function Welcome(){
+			var welcome = document.getElementById('welcome');
+			welcome.innerHTML='<h1>{{value}}</h1>';
+			$('#BB').delay(1000).fadeIn(1000);
+		}
+	</script>
+	<script>
+		window.onload=function(){
+			document.body.addEventListener("mousemove", function(e){
+				var mX = e.pageX;
+				var mY = e.pageY;
+				var X = window.parent.screen.width;
+				var Y = window.parent.screen.height;
+				if(mX-X/2>100){
+					w=-1*(mX-X/2-100)/100+40;
+					$('#welcome').css('right',(mX-X/2-100)/7);
+					$('#BB').css('width',w+'%');
+				}else if(mX-X/2<-100){
+					w=-1*(mX-X/2+100)/100+40;
+					$('#welcome').css('right',(mX-X/2+100)/7);
+					$('#BB').css('width',w+'%');
+				}
+				if(mY-Y/2>50){
+					w=-1*(mY-Y/2-50)/40+10;
+					$('#welcome').css('bottom',(mY-Y/2-50)/7);
+					$('#BB').css('top',w+'%');
+				}else if(mY-Y/2<-50){
+					w=-1*(mY-Y/2+50)/40+10;
+					$('#welcome').css('bottom',(mY-Y/2+50)/7);
+					$('#BB').css('top',w+'%');
+				}
+			});
+		}
+	</script>
+	
+	<script src="{% static 'js/jquery-1.10.2.min.js' %}"></script>
+	<script src="{% static 'js/jquery-ui-1.10.3.custom.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+	
+	
+	<title>uaaaaaa</title>
+	
+</head>
+<body>
+	<div id="load-background">
+		<div id="load-main">
+			<div id="load-text">
+			<span id="Ltext1">N</span>
+			<span id="Ltext2">O</span>
+			<span id="Ltext3">W</span>
+			<span id="Ltext4">L</span>
+			<span id="Ltext5">O</span>
+			<span id="Ltext6">A</span>
+			<span id="Ltext7">D</span>
+			<span id="Ltext8">I</span>
+			<span id="Ltext9">N</span>
+			<span id="Ltext10">G</span>
+			</div>
+		</div>
+	</div>
+	<div id="main">
+		<div id="welcome">
+			<h1>welcome</h1>
+		</div>
+		<div id="BB">
+			<h2>BB</h2>
+		</div>
+		<div>
+			<img src="{{img}}"/>
+		</div>
+	</div>
+</body>
+</html>
