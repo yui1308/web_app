@@ -12,5 +12,7 @@ This is a public repository, but we are using as private repository.
 理解できるようになると思うので)
 基本的にはネットに載ってますが分からない場合は連絡ください。
 
+今回はブランチ切らなくても大丈夫です。
+
 written by Gorira-Banana
 
