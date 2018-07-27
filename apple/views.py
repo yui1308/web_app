@@ -14,3 +14,6 @@ def appmain(request):
 	#welcome=soup.select("#result_box")[0].getText()
 	welcome="ようこそ"
 	return render(request,'html/main.html',{'value':welcome})
+	
+def appBB(request):
+	return render(request,'html/BEMYBABY.html',{})
