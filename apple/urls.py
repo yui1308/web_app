@@ -19,4 +19,5 @@ from . import views
 urlpatterns = [
     url(r'^$', views.appmain,name='apple'),
 	url(r'^BB/',views.appBB,name='BB'),
+	url(r'^Sanrio/',views.appSanrio,name='Sanrio')
 ]

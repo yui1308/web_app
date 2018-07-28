@@ -1,0 +1,31 @@
+/* title */
+#title{
+	color: #B384FF;
+	font-size: 45px;
+	font-family: Monotype Corsiva;
+	margin: auto;
+	width: 75%;
+}
+
+body {
+	background-color: #FFDDFF;
+}
+
+/* main */
+#main{
+	background: #FFFFCC;
+	width: 75%;
+	margin: auto;
+	padding: 20px;
+}
+
+/* name */
+#name{
+	color: #8B4513;
+	font-size: 25px;
+	text-align: center;
+}
+
+#bun{
+	text-align: center;
+}
