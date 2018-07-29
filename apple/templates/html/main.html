@@ -12,6 +12,9 @@
 			var welcome = document.getElementById('welcome');
 			welcome.innerHTML='<h1>{{value}}</h1>';
 			$('#BB').delay(1000).fadeIn(1000);
+			$('#Sanrio').delay(1000).fadeIn(1000);
+			$('#JOKE').delay(1000).fadeIn(1000);
+			$('#MAZE').delay(1000).fadeIn(1000);
 		}
 	</script>
 	<script>
@@ -22,22 +25,80 @@
 				var X = window.parent.screen.width;
 				var Y = window.parent.screen.height;
 				if(mX-X/2>100){
-					w=-1*(mX-X/2-100)/100+40;
-					$('#welcome').css('right',(mX-X/2-100)/7);
-					$('#BB').css('width',w+'%');
+					w=-1*(mX-X/2-100)/100;
+					w1=w+30;
+					w2=-1*w+20;
+					w3=-1*w+30;
+					w4=w+35;
+					dis=mX-X/2-100;
+					$('#welcome').css('right',dis/128);
+					$('#mback7').css('right',dis/121);
+					$('#mback6').css('right',dis/115);
+					$('#mback5').css('right',dis/110);
+					$('#mback4').css('right',dis/106);
+					$('#mback3').css('right',dis/103);
+					$('#mback2').css('right',dis/101);
+					$('#mback1').css('right',dis/100);
+					$('#BB').css('width',w1+'%');
+					$('#Sanrio').css('width',w2+'%');
+					$('#JOKE').css('width',w3+'%');
+					$('#MAZE').css('width',w4+'%');
 				}else if(mX-X/2<-100){
-					w=-1*(mX-X/2+100)/100+40;
-					$('#welcome').css('right',(mX-X/2+100)/7);
-					$('#BB').css('width',w+'%');
+					w=-1*(mX-X/2+100)/100;
+					w1=w+30;
+					w2=-1*w+20;
+					w3=-1*w+30;
+					w4=w+35;
+					dis=mX-X/2+100;
+					$('#welcome').css('right',dis/128);
+					$('#mback7').css('right',dis/121);
+					$('#mback6').css('right',dis/115);
+					$('#mback5').css('right',dis/110);
+					$('#mback4').css('right',dis/106);
+					$('#mback3').css('right',dis/103);
+					$('#mback2').css('right',dis/101);
+					$('#mback1').css('right',dis/100);
+					$('#BB').css('width',w1+'%');
+					$('#Sanrio').css('width',w2+'%');
+					$('#JOKE').css('width',w3+'%');
+					$('#MAZE').css('width',w4+'%');
 				}
 				if(mY-Y/2>50){
-					w=-1*(mY-Y/2-50)/40+10;
-					$('#welcome').css('bottom',(mY-Y/2-50)/7);
-					$('#BB').css('top',w+'%');
+					w=-1*(mY-Y/2-50)/40;
+					w1=w+10;
+					w2=w+50;
+					w3=w+60;
+					dis=mY-Y/2-50;
+					$('#welcome').css('bottom',dis/128);
+					$('#mback7').css('bottom',dis/121);
+					$('#mback6').css('bottom',dis/115);
+					$('#mback5').css('bottom',dis/110);
+					$('#mback4').css('bottom',dis/106);
+					$('#mback3').css('bottom',dis/103);
+					$('#mback2').css('bottom',dis/101);
+					$('#mback1').css('bottom',dis/100);
+					$('#BB').css('top',w1+'%');
+					$('#Sanrio').css('top',w2+'%');
+					$('#JOKE').css('top',w1+'%');
+					$('#MAZE').css('top',w3+'%');
 				}else if(mY-Y/2<-50){
-					w=-1*(mY-Y/2+50)/40+10;
-					$('#welcome').css('bottom',(mY-Y/2+50)/7);
-					$('#BB').css('top',w+'%');
+					w=-1*(mY-Y/2+50)/40;
+					w1=w+10;
+					w2=w+50;
+					w3=w+60;
+					dis=mY-Y/2+50;
+					$('#welcome').css('bottom',dis/128);
+					$('#mback7').css('bottom',dis/121);
+					$('#mback6').css('bottom',dis/115);
+					$('#mback5').css('bottom',dis/110);
+					$('#mback4').css('bottom',dis/106);
+					$('#mback3').css('bottom',dis/103);
+					$('#mback2').css('bottom',dis/101);
+					$('#mback1').css('bottom',dis/100);
+					$('#BB').css('top',w1+'%');
+					$('#Sanrio').css('top',w2+'%');
+					$('#JOKE').css('top',w1+'%');
+					$('#MAZE').css('top',w3+'%');
 				}
 			});
 		}
@@ -69,8 +130,22 @@
 		</div>
 	</div>
 	<div id="main">
+		<div id="mback1" class="mainback">
+		<div id="mback2" class="mainback">
+		<div id="mback3" class="mainback">
+		<div id="mback4" class="mainback">
+		<div id="mback5" class="mainback">
+		<div id="mback6" class="mainback">
+		<div id="mback7" class="mainback">
 		<div id="welcome">
 			<h1>welcome</h1>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
 		</div>
 		<a href="http://127.0.0.1:8000/apple/BB/" target="_blank">
 		<div id="BB">
@@ -82,9 +157,22 @@
 			<h2>Sanrio</h2>
 		</div>
 		</a>
-		<div>
-			<img src="{{img}}"/>
+		<a href="http://127.0.0.1:8000/apple/JOKE/" target="_blank">
+		<div id="JOKE">
+			<h2>JOKE</h2>
 		</div>
+		</a>
+		
+		<a href="http://127.0.0.1:8000/apple/MAZE/" target="_blank">
+		<div id='MAZE'>
+			<h2>MAZE</h2>
+			端末によりプレイできない場合もございます
+		</div>
+		</a>
+		
+		<!--<div>
+			<img src="{{img}}"/>
+		</div>-->
 	</div>
 </body>
 </html>

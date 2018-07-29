@@ -19,5 +19,7 @@ from . import views
 urlpatterns = [
     url(r'^$', views.appmain,name='apple'),
 	url(r'^BB/',views.appBB,name='BB'),
-	url(r'^Sanrio/',views.appSanrio,name='Sanrio')
+	url(r'^Sanrio/',views.appSanrio,name='Sanrio'),
+	url(r'^JOKE/',views.appJoke,name='joke'),
+	url(r'^MAZE/',views.appMAZE,name='maze')
 ]
